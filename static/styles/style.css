@@ -45,4 +45,14 @@ body{
 	margin-left: 20px;
 	margin-right: 20px;
 	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.image-container {
+	padding-left: 2px;
+	border-color: lightgray;
+	border-width: 1px;
+	border-style: solid;
+	padding-right: 2px;
+	padding-top: 2px;
 }
