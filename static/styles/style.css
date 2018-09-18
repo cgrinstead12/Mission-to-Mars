@@ -29,9 +29,12 @@ h1{
 	padding-top: 10px;
 }
 h2 {
-	font-size: 20px;
+	font-size: 30px;
 }
 h3 {
+	font-size: 18px;
+}
+h4 {
 	font-size: 18px;
 }
 p {
