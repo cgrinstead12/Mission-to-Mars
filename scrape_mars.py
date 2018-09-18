@@ -15,6 +15,7 @@ def Scrape():
   print(f'chrome driver visiting url {url}')
 
   browser.visit(url)
+  time.sleep(5)
   html = browser.html
   soup = bs(html,"html.parser")
 
