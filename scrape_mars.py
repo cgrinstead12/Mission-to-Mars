@@ -8,7 +8,7 @@ def Scrape():
 
   mars_dict = {}
 
-  executable_path = {"executable_path":"C:/Users/cgrinstead12/Desktop/Mission to Mars/chromedriver.exe"}
+  executable_path = {"executable_path":"C:/Users/cgrinstead12/Desktop/Mission-to-Mars/chromedriver.exe"}
   browser = Browser("chrome", **executable_path, headless = False)
   url = "https://mars.nasa.gov/news/"
   
