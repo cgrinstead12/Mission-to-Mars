@@ -89,7 +89,6 @@ def Scrape():
                'Valles Marineris Hemisphere Enhanced']
   links = []
 
-# [  { title: '', url: '' },  ]
   for hemisphere in hemispheres:
     browser.visit(url)
     time.sleep(5)

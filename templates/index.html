@@ -10,7 +10,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
 
 </head>
@@ -25,7 +24,7 @@
     <!-- Latest Mars News -->
     <div class="container" style="width:100%">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <h2><strong>Latest Mars News</strong></h2>
                 <h3><strong>{{ mars_info.news_title }}</strong></h3>
                 <p>{{ mars_info.news_para }}</p>
@@ -59,77 +58,59 @@
                 </table>
                     </div>
 
-            
-
-<div class="panel panel-default">
-      <div class="panel-heading">
-                    <h3 class="panel-title"><strong>Mars Fact</strong></h3>
-
-                </div>
-
-     <table class="table">
-      <thead>
-        <tr>
-          <th class="col-md-3"><small><strong>Description</strong></small></th>
-          <th class="col-md-3"><small><strong>Facts</strong></small></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><small>Equatorial Diameter:</small></td>
-          <td><small>{{ mars_info.mars_facts[0].column_description }}</small></td>
-
-        </tr>
-        <tr>
-          <td><small>Polar Diameter:</small></td>
-          <td><small>{{ mars_info.mars_facts[1].column_description }}</small></td>
-
-        </tr>
-        <tr>
-          <td><small>Mass:</small></td>
-          <td><small>{{ mars_info.mars_facts[2].column_description }}</small></td>
-
-        </tr>
-        <tr>
-          <td><small>Moons:</small></td>
-          <td><small>{{mars_info.mars_facts[3].column_description}}</small></td>
-
-        </tr>
-        <tr>
-          <td><small>Orbit Distance:</small></td>
-          <td><small>{{mars_info.mars_facts[4].column_description}}</small></td>
-
-        </tr>
-        <tr>
-          <td><small>Orbit Period:</small></td>
-          <td><small>{{mars_info.mars_facts[5].column_description}}</small></td>
-
-        </tr>
-        <tr>
-          <td><small>Surface Temperature:</small></td>
-          <td><small>{{mars_info.mars_facts[6].column_description}}</small></td>
-
-        </tr>  
-        <tr>
-          <td><small>First Record:</small></td>
-          <td><small>{{mars_info.mars_facts[7].column_description}}</small></td>
-
-        </tr> 
-        <tr>
-          <td><small>Recorded By:</small></td>
-          <td><small>{{mars_info.mars_facts[8].column_description }}</small></td>
-
-        </tr> 
-
-      </tbody>
-    </table>
-   </div>
-</div>
-
-
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><strong>Mars Fact</strong></h3>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="col-md-3"><small><strong>Description</strong></small></th>
+                        <th class="col-md-3"><small><strong>Facts</strong></small></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><small>Equatorial Diameter:</small></td>
+                        <td><small>{{ mars_info.mars_facts[0].column_description }}</small></td>
+                    </tr>
+                    <tr>
+                        <td><small>Polar Diameter:</small></td>
+                        <td><small>{{ mars_info.mars_facts[1].column_description }}</small></td>
+                    </tr>
+                    <tr>
+                        <td><small>Mass:</small></td>
+                        <td><small>{{ mars_info.mars_facts[2].column_description }}</small></td>
+                    </tr>
+                    <tr>
+                        <td><small>Moons:</small></td>
+                        <td><small>{{mars_info.mars_facts[3].column_description}}</small></td>
+                    </tr>
+                    <tr>
+                        <td><small>Orbit Distance:</small></td>
+                        <td><small>{{mars_info.mars_facts[4].column_description}}</small></td>
+                    </tr>
+                    <tr>
+                        <td><small>Orbit Period:</small></td>
+                        <td><small>{{mars_info.mars_facts[5].column_description}}</small></td>
+                    </tr>
+                    <tr>
+                        <td><small>Surface Temperature:</small></td>
+                        <td><small>{{mars_info.mars_facts[6].column_description}}</small></td>
+                    </tr>  
+                    <tr>
+                        <td><small>First Record:</small></td>
+                        <td><small>{{mars_info.mars_facts[7].column_description}}</small></td>
+                    </tr> 
+                    <tr>
+                        <td><small>Recorded By:</small></td>
+                        <td><small>{{mars_info.mars_facts[8].column_description }}</small></td>
+                    </tr> 
+                </tbody>
+            </table>
+            </div>
+            </div>
         </div>
-        <div class="col-md-1"></div>
-    </div>
 
     <!-- Mars Hemispheres -->
     <h2 class="hemispheres" style="padding-left: 15px"><strong>Mars Hemispheres</strong></h2>
@@ -158,9 +139,9 @@
         <div class="col-sm-1"></div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
 </body>
 </html>
