@@ -16,7 +16,6 @@ def index():
     mars_info = mongo.db.mars_info.find_one()
     return render_template("index.html", mars_info=mars_info)
 
-
 @app.route("/scrape")
 def scraper():
     mars_info = mongo.db.mars_info
@@ -25,7 +24,6 @@ def scraper():
     print(mars_data)
     mars_info.update({}, mars_data, upsert=True)
     return redirect("/", code=302)
-
 
 if __name__ == "__main__":
     app.run(debug=True)

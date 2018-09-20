@@ -55,16 +55,23 @@ def Scrape():
   soup = bs(facts_html, "html.parser")
   results = soup.find('tbody').find_all('tr')
 
+  mars_descriptions = []
   mars_facts = []
 
   for result in results:
+      column_description = result.find('td', class_="column-1").text
+      print(f' this is the column description: {column_description}')
       column_fact = result.find('td', class_="column-2").text
       print(f' this is the column fact: {column_fact}')
       mars_space_facts = {}
-      mars_space_facts['column_description'] = column_fact
+      mars_space_descriptions = {}
+      mars_space_descriptions['column_description'] = column_description
+      mars_space_facts['column_fact'] = column_fact
+      mars_descriptions.append(mars_space_descriptions)
       mars_facts.append(mars_space_facts)
 
   mars_dict['mars_facts'] = mars_facts
+  mars_dict["mars_descriptions"] = mars_descriptions
   df = pd.DataFrame(list(mars_dict.items()), columns=['Facts', 'Data'])
 
   url = 'https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars'
@@ -88,8 +95,8 @@ def Scrape():
     image_dict['url'] = image_url_hemisphere
     image_dict['title'] = hemisphere
     links.append(image_dict)
-    
   mars_dict['links'] = links
+
   print(mars_dict)
   return mars_dict
   print("scrape complete")
