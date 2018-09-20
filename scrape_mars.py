@@ -58,8 +58,6 @@ def Scrape():
   mars_facts = []
 
   for result in results:
-      column_description = result.find('td', class_="column-1").text
-      print(f' this is the column description: {column_description}')
       column_fact = result.find('td', class_="column-2").text
       print(f' this is the column fact: {column_fact}')
       mars_space_facts = {}
