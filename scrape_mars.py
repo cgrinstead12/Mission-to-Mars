@@ -88,6 +88,7 @@ def Scrape():
     image_dict['url'] = image_url_hemisphere
     image_dict['title'] = hemisphere
     links.append(image_dict)
+    
   mars_dict['links'] = links
   print(mars_dict)
   return mars_dict
